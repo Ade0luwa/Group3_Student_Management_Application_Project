@@ -98,6 +98,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfessorDashboard.resx">
+      <DependentUpon>ProfessorDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -110,8 +113,17 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentCourses.resx">
+      <DependentUpon>StudentCourses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentGrades.resx">
+      <DependentUpon>StudentGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentNotification.resx">
+      <DependentUpon>StudentNotification.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Group3StudentManagementDataSet.xsc">
       <DependentUpon>Group3StudentManagementDataSet.xsd</DependentUpon>
