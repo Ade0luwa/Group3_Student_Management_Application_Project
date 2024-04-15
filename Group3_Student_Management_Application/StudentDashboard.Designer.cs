@@ -95,6 +95,7 @@
             this.notification_label.Size = new System.Drawing.Size(242, 48);
             this.notification_label.TabIndex = 19;
             this.notification_label.Text = "Notification";
+            this.notification_label.Click += new System.EventHandler(this.notification_label_Click);
             // 
             // grades_label
             // 
@@ -106,6 +107,7 @@
             this.grades_label.Size = new System.Drawing.Size(152, 48);
             this.grades_label.TabIndex = 18;
             this.grades_label.Text = "Grades";
+            this.grades_label.Click += new System.EventHandler(this.grades_label_Click);
             // 
             // pictureBox1
             // 
@@ -128,6 +130,7 @@
             this.courses_label.Size = new System.Drawing.Size(170, 48);
             this.courses_label.TabIndex = 15;
             this.courses_label.Text = "Courses";
+            this.courses_label.Click += new System.EventHandler(this.courses_label_Click);
             // 
             // dashboard_label
             // 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,8 @@ namespace Group3_Student_Management_Application
             InitializeComponent();
         }
 
+        SqlConnection conn = new SqlConnection(@"Data Source=ADEOLUWATOMIWA\MSSQLSERVER01;Initial Catalog=Group3StudentManagement;Integrated Security=True;");
+
         private void logout_label_Click(object sender, EventArgs e)
         {
 
@@ -31,5 +34,26 @@ namespace Group3_Student_Management_Application
             }
             
         }
+
+        private void courses_label_Click(object sender, EventArgs e)
+        {
+            StudentCourses course = new StudentCourses();
+            course.Show();
+            this.Close();
+        }
+
+        private void grades_label_Click(object sender, EventArgs e)
+        {
+            StudentGrades studentGrades = new StudentGrades();
+            studentGrades.Show();
+            this.Close();
+        }
+
+        private void notification_label_Click(object sender, EventArgs e)
+        {
+            StudentNotification notification = new StudentNotification();
+            notification.Show();
+            this.Close();
+        }
     }
-}
+    }

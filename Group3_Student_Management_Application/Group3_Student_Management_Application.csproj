@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StudentCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentCourses.Designer.cs">
+      <DependentUpon>StudentCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Group3StudentManagementDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -76,6 +82,18 @@
     </Compile>
     <Compile Include="StudentDashboard.Designer.cs">
       <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentGrades.Designer.cs">
+      <DependentUpon>StudentGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentNotification.Designer.cs">
+      <DependentUpon>StudentNotification.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
