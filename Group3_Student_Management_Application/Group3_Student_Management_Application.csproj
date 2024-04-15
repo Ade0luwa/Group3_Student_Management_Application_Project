@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProfessorCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessorCourses.Designer.cs">
+      <DependentUpon>ProfessorCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessorGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfessorGrades.Designer.cs">
+      <DependentUpon>ProfessorGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentCourses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,8 +110,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfessorCourses.resx">
+      <DependentUpon>ProfessorCourses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProfessorDashboard.resx">
       <DependentUpon>ProfessorDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfessorGrades.resx">
+      <DependentUpon>ProfessorGrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

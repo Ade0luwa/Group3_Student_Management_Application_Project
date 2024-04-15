@@ -1,6 +1,6 @@
 ﻿namespace Group3_Student_Management_Application
 {
-    partial class ProfessorNotification
+    partial class ProfessorGrades
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,108 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfessorNotification));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfessorGrades));
+            this.view_stat101_grade_button = new System.Windows.Forms.Button();
+            this.view_math101_grade_button = new System.Windows.Forms.Button();
+            this.stat_picture = new System.Windows.Forms.PictureBox();
+            this.math_picture = new System.Windows.Forms.PictureBox();
+            this.stat_label = new System.Windows.Forms.Label();
+            this.math_label = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.notification_label = new System.Windows.Forms.Label();
             this.logout_label = new System.Windows.Forms.Label();
             this.grades_label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.courses_label = new System.Windows.Forms.Label();
             this.dashboard_label = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.view_math101_grade_button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stat_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.math_picture)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // view_stat101_grade_button
+            // 
+            this.view_stat101_grade_button.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.view_stat101_grade_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_stat101_grade_button.Location = new System.Drawing.Point(747, 370);
+            this.view_stat101_grade_button.Name = "view_stat101_grade_button";
+            this.view_stat101_grade_button.Size = new System.Drawing.Size(165, 68);
+            this.view_stat101_grade_button.TabIndex = 37;
+            this.view_stat101_grade_button.Text = "Enter Students Grade";
+            this.view_stat101_grade_button.UseVisualStyleBackColor = false;
+            // 
+            // view_math101_grade_button
+            // 
+            this.view_math101_grade_button.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.view_math101_grade_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view_math101_grade_button.Location = new System.Drawing.Point(747, 124);
+            this.view_math101_grade_button.Name = "view_math101_grade_button";
+            this.view_math101_grade_button.Size = new System.Drawing.Size(165, 68);
+            this.view_math101_grade_button.TabIndex = 36;
+            this.view_math101_grade_button.Text = "Enter Students Grade";
+            this.view_math101_grade_button.UseVisualStyleBackColor = false;
+            // 
+            // stat_picture
+            // 
+            this.stat_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stat_picture.BackgroundImage")));
+            this.stat_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.stat_picture.Location = new System.Drawing.Point(330, 323);
+            this.stat_picture.Name = "stat_picture";
+            this.stat_picture.Size = new System.Drawing.Size(387, 157);
+            this.stat_picture.TabIndex = 35;
+            this.stat_picture.TabStop = false;
+            // 
+            // math_picture
+            // 
+            this.math_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("math_picture.BackgroundImage")));
+            this.math_picture.Location = new System.Drawing.Point(330, 77);
+            this.math_picture.Name = "math_picture";
+            this.math_picture.Size = new System.Drawing.Size(383, 160);
+            this.math_picture.TabIndex = 34;
+            this.math_picture.TabStop = false;
+            // 
+            // stat_label
+            // 
+            this.stat_label.AutoSize = true;
+            this.stat_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stat_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stat_label.Location = new System.Drawing.Point(452, 483);
+            this.stat_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.stat_label.Name = "stat_label";
+            this.stat_label.Size = new System.Drawing.Size(123, 32);
+            this.stat_label.TabIndex = 33;
+            this.stat_label.Text = "STAT101";
+            // 
+            // math_label
+            // 
+            this.math_label.AutoSize = true;
+            this.math_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.math_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.math_label.Location = new System.Drawing.Point(452, 237);
+            this.math_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.math_label.Name = "math_label";
+            this.math_label.Size = new System.Drawing.Size(137, 32);
+            this.math_label.TabIndex = 32;
+            this.math_label.Text = "MATH101";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.panel1.Controls.Add(this.notification_label);
+            this.panel1.Controls.Add(this.logout_label);
+            this.panel1.Controls.Add(this.grades_label);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.courses_label);
+            this.panel1.Controls.Add(this.dashboard_label);
+            this.panel1.Location = new System.Drawing.Point(21, 22);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(196, 538);
+            this.panel1.TabIndex = 31;
             // 
             // notification_label
             // 
             this.notification_label.AutoSize = true;
-            this.notification_label.BackColor = System.Drawing.Color.Honeydew;
             this.notification_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notification_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notification_label.Location = new System.Drawing.Point(19, 411);
@@ -70,6 +154,7 @@
             // grades_label
             // 
             this.grades_label.AutoSize = true;
+            this.grades_label.BackColor = System.Drawing.Color.Honeydew;
             this.grades_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.grades_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grades_label.Location = new System.Drawing.Point(19, 341);
@@ -115,57 +200,27 @@
             this.dashboard_label.TabIndex = 16;
             this.dashboard_label.Text = "Dashboard";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.panel1.Controls.Add(this.notification_label);
-            this.panel1.Controls.Add(this.logout_label);
-            this.panel1.Controls.Add(this.grades_label);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.courses_label);
-            this.panel1.Controls.Add(this.dashboard_label);
-            this.panel1.Location = new System.Drawing.Point(21, 22);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 538);
-            this.panel1.TabIndex = 24;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.Ivory;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(243, 22);
-            this.textBox1.MaxLength = 327670000;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(816, 451);
-            this.textBox1.TabIndex = 30;
-            // 
-            // view_math101_grade_button
-            // 
-            this.view_math101_grade_button.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.view_math101_grade_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view_math101_grade_button.Location = new System.Drawing.Point(579, 486);
-            this.view_math101_grade_button.Name = "view_math101_grade_button";
-            this.view_math101_grade_button.Size = new System.Drawing.Size(165, 68);
-            this.view_math101_grade_button.TabIndex = 31;
-            this.view_math101_grade_button.Text = "Post Notification";
-            this.view_math101_grade_button.UseVisualStyleBackColor = false;
-            // 
-            // ProfessorNotification
+            // ProfessorGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(1086, 582);
+            this.Controls.Add(this.view_stat101_grade_button);
             this.Controls.Add(this.view_math101_grade_button);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.stat_picture);
+            this.Controls.Add(this.math_picture);
+            this.Controls.Add(this.stat_label);
+            this.Controls.Add(this.math_label);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ProfessorNotification";
-            this.Text = "StudentNotification";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Name = "ProfessorGrades";
+            this.Text = "ProfessorGrades";
+            ((System.ComponentModel.ISupportInitialize)(this.stat_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.math_picture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,14 +228,18 @@
 
         #endregion
 
+        private System.Windows.Forms.Button view_stat101_grade_button;
+        private System.Windows.Forms.Button view_math101_grade_button;
+        private System.Windows.Forms.PictureBox stat_picture;
+        private System.Windows.Forms.PictureBox math_picture;
+        private System.Windows.Forms.Label stat_label;
+        private System.Windows.Forms.Label math_label;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label notification_label;
         private System.Windows.Forms.Label logout_label;
         private System.Windows.Forms.Label grades_label;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label courses_label;
         private System.Windows.Forms.Label dashboard_label;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button view_math101_grade_button;
     }
 }
