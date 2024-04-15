@@ -92,6 +92,9 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentDashboard.resx">
+      <DependentUpon>StudentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Group3StudentManagementDataSet.xsc">
       <DependentUpon>Group3StudentManagementDataSet.xsd</DependentUpon>
     </None>
