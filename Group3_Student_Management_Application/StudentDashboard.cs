@@ -41,7 +41,7 @@ namespace Group3_Student_Management_Application
         {
             StudentCourses course = new StudentCourses();
             course.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void grades_label_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace Group3_Student_Management_Application
 
         private void notification_label_Click(object sender, EventArgs e)
         {
-            StudentNotification notification = new StudentNotification();
+            ProfessorNotification notification = new ProfessorNotification();
             notification.Show();
             this.Close();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Group3_Student_Management_Application
 {
-    public partial class StudentNotification : Form
+    public partial class ProfessorNotification : Form
     {
-        public StudentNotification()
+        public ProfessorNotification()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Group3_Student_Management_Application
 {
-    partial class StudentNotification
+    partial class ProfessorNotification
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentNotification));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfessorNotification));
             this.notification_label = new System.Windows.Forms.Label();
             this.logout_label = new System.Windows.Forms.Label();
             this.grades_label = new System.Windows.Forms.Label();
