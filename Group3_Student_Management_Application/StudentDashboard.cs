@@ -13,9 +13,11 @@ namespace Group3_Student_Management_Application
 {
     public partial class StudentDashboard : Form
     {
-        public StudentDashboard()
+        private string firstName;
+        public StudentDashboard(string firstName)
         {
             InitializeComponent();
+            this.firstName = firstName;
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=ADEOLUWATOMIWA\MSSQLSERVER01;Initial Catalog=Group3StudentManagement;Integrated Security=True;");
@@ -54,6 +56,11 @@ namespace Group3_Student_Management_Application
             StudentNotification notification = new StudentNotification();
             notification.Show();
             this.Close();
+        }
+
+        private void StudentDashboard_Load(object sender, EventArgs e)
+        {
+            welcome_label.Text = $"Hello { firstName}!!!" ;
         }
     }
     }

@@ -16,8 +16,8 @@ namespace Group3_Student_Management_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
-            Application.Run(new StudentDashboard());
+            Application.Run(new Login());
+            
         }
     }
 }

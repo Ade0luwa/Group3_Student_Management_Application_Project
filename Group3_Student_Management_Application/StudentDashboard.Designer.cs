@@ -66,9 +66,8 @@
             this.welcome_label.Location = new System.Drawing.Point(334, 31);
             this.welcome_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcome_label.Name = "welcome_label";
-            this.welcome_label.Size = new System.Drawing.Size(480, 114);
+            this.welcome_label.Size = new System.Drawing.Size(0, 171);
             this.welcome_label.TabIndex = 13;
-            this.welcome_label.Text = "Hello, Shad! ";
             // 
             // panel1
             // 
@@ -204,6 +203,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "StudentDashboard";
             this.Text = "StudentDashboard";
+            this.Load += new System.EventHandler(this.StudentDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

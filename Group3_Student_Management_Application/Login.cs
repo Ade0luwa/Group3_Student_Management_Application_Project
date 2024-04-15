@@ -49,7 +49,7 @@ namespace Group3_Student_Management_Application
 
                 try
                 {
-                    String command = $"SELECT * FROM UserCredentials WHERE Email = '{email}' AND Password = '{password}'";
+                    String command = $"SELECT FirstName, Role FROM UserCredentials WHERE Email = '{email}' AND Password = '{password}'";
                     SqlDataAdapter sda = new SqlDataAdapter(command, conn);
 
                     DataTable dt = new DataTable();
@@ -65,7 +65,8 @@ namespace Group3_Student_Management_Application
                         // Show different dashboards based on the user's role
                         if (role == "Student")
                         {
-                            StudentDashboard studentDashboard = new StudentDashboard();
+                            string firstName = dt.Rows[0]["FirstName"].ToString();
+                            StudentDashboard studentDashboard = new StudentDashboard(firstName);
                             studentDashboard.Show();
                             this.Hide();
                         }
