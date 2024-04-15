@@ -39,6 +39,7 @@ namespace Group3_Student_Management_Application
 
         private void courses_label_Click(object sender, EventArgs e)
         {
+            //navigating to courses page
             StudentCourses course = new StudentCourses();
             course.Show();
             this.Hide();
@@ -46,6 +47,7 @@ namespace Group3_Student_Management_Application
 
         private void grades_label_Click(object sender, EventArgs e)
         {
+            //navigating to grades page
             StudentGrades studentGrades = new StudentGrades();
             studentGrades.Show();
             this.Close();

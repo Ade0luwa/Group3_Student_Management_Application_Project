@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Group3_Student_Management_Application
 {
@@ -56,12 +57,44 @@ namespace Group3_Student_Management_Application
 
         private void view_math101_grade_button_Click(object sender, EventArgs e)
         {
-
+            // Call a method to fetch and display Math 101 grades
+            DisplayGrades("Math101");
         }
 
         private void view_stat101_grade_button_Click(object sender, EventArgs e)
         {
-
+            // Call a method to fetch and display Stat 101 grades
+            DisplayGrades("Stat101");
         }
+
+        private void DisplayGrades(string courseName)
+        {
+            // Initialize a string to hold the grades
+            string gradesMessage = "Grades for " + courseName + ":\n";
+
+
+            conn.Open();
+
+            // SQL query to retrieve grades for the specified course
+            string query = "SELECT Grades.UserID, Grades.Grade FROM Grades INNER JOIN Courses ON Grades.CourseID = Courses.CourseID WHERE Courses.CourseName = @CourseName";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                command.Parameters.AddWithValue("@CourseName", courseName);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        gradesMessage += "Your current grade is: " + reader["Grade"] + "\n";
+                    }
+                }
+            }
+
+            // Displays the gradesMessage in a message box
+            MessageBox.Show(gradesMessage, "Grades Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            conn.Close();
+        }
+
     }
 }
