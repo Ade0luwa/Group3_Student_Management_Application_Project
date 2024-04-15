@@ -51,7 +51,7 @@
             this.logout_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logout_label.Location = new System.Drawing.Point(28, 735);
             this.logout_label.Name = "logout_label";
-            this.logout_label.Size = new System.Drawing.Size(149, 48);
+            this.logout_label.Size = new System.Drawing.Size(99, 32);
             this.logout_label.TabIndex = 11;
             this.logout_label.Text = "Logout";
             this.logout_label.Click += new System.EventHandler(this.logout_label_Click);
@@ -63,7 +63,7 @@
             this.welcome_label.Location = new System.Drawing.Point(334, 31);
             this.welcome_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcome_label.Name = "welcome_label";
-            this.welcome_label.Size = new System.Drawing.Size(0, 171);
+            this.welcome_label.Size = new System.Drawing.Size(0, 76);
             this.welcome_label.TabIndex = 13;
             // 
             // panel1
@@ -88,7 +88,7 @@
             this.notification_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notification_label.Location = new System.Drawing.Point(28, 632);
             this.notification_label.Name = "notification_label";
-            this.notification_label.Size = new System.Drawing.Size(242, 48);
+            this.notification_label.Size = new System.Drawing.Size(158, 32);
             this.notification_label.TabIndex = 19;
             this.notification_label.Text = "Notification";
             this.notification_label.Click += new System.EventHandler(this.notification_label_Click);
@@ -100,7 +100,7 @@
             this.grades_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grades_label.Location = new System.Drawing.Point(28, 525);
             this.grades_label.Name = "grades_label";
-            this.grades_label.Size = new System.Drawing.Size(152, 48);
+            this.grades_label.Size = new System.Drawing.Size(99, 32);
             this.grades_label.TabIndex = 18;
             this.grades_label.Text = "Grades";
             this.grades_label.Click += new System.EventHandler(this.grades_label_Click);
@@ -123,7 +123,7 @@
             this.courses_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courses_label.Location = new System.Drawing.Point(28, 428);
             this.courses_label.Name = "courses_label";
-            this.courses_label.Size = new System.Drawing.Size(170, 48);
+            this.courses_label.Size = new System.Drawing.Size(110, 32);
             this.courses_label.TabIndex = 15;
             this.courses_label.Text = "Courses";
             this.courses_label.Click += new System.EventHandler(this.courses_label_Click);
@@ -137,7 +137,7 @@
             this.dashboard_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboard_label.Location = new System.Drawing.Point(28, 329);
             this.dashboard_label.Name = "dashboard_label";
-            this.dashboard_label.Size = new System.Drawing.Size(225, 48);
+            this.dashboard_label.Size = new System.Drawing.Size(148, 32);
             this.dashboard_label.TabIndex = 16;
             this.dashboard_label.Text = "Dashboard";
             // 

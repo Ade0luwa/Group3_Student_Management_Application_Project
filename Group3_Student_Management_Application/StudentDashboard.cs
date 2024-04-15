@@ -24,7 +24,8 @@ namespace Group3_Student_Management_Application
 
         private void logout_label_Click(object sender, EventArgs e)
         {
-
+            dashboard_label.BackColor = Color.DarkSeaGreen;
+            logout_label.BackColor = Color.Honeydew;
             DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             // Check the user's response
@@ -34,7 +35,7 @@ namespace Group3_Student_Management_Application
                 login.Show();
                 this.Close();
             }
-            
+
         }
 
         private void courses_label_Click(object sender, EventArgs e)
@@ -55,10 +56,42 @@ namespace Group3_Student_Management_Application
 
         private void notification_label_Click(object sender, EventArgs e)
         {
-            ProfessorNotification notification = new ProfessorNotification();
-            notification.Show();
-            this.Close();
+            // Change the backcolor of the label text to Honeydew
+            dashboard_label.BackColor = Color.DarkSeaGreen;
+            notification_label.BackColor = Color.Honeydew;
+            DisplayNotificationMessage();
         }
+
+        private void DisplayNotificationMessage()
+        {
+            conn.Open();
+
+            // SQL query to retrieve the latest notification message
+            string query = "SELECT TOP 1 NotificationMessage FROM Notification ORDER BY Date DESC";
+
+            using (SqlCommand command = new SqlCommand(query, conn))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        // Retrieve the notification message
+                        string notificationMessage = reader["NotificationMessage"].ToString();
+
+                        // Display the notification message in a message box
+                        MessageBox.Show(notificationMessage, "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dashboard_label.BackColor = Color.Honeydew;
+                        notification_label.BackColor = Color.DarkSeaGreen;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No notification found.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            conn.Close();
+        }
+    
 
         private void StudentDashboard_Load(object sender, EventArgs e)
         {
