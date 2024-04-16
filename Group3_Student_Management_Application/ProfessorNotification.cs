@@ -50,8 +50,9 @@ namespace Group3_Student_Management_Application
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Congratulations you have been successfully sent an announcement to your students", "Announcement", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Congratulations your message has been successfully sent", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 notification_textBox.Clear();
+                conn.Close();
             }
         }
 
