@@ -36,8 +36,8 @@
             this.courses_label = new System.Windows.Forms.Label();
             this.dashboard_label = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.view_math101_grade_button = new System.Windows.Forms.Button();
+            this.notification_textBox = new System.Windows.Forms.TextBox();
+            this.send_notification_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,44 +48,45 @@
             this.notification_label.BackColor = System.Drawing.Color.Honeydew;
             this.notification_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notification_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notification_label.Location = new System.Drawing.Point(19, 411);
-            this.notification_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.notification_label.Location = new System.Drawing.Point(28, 632);
             this.notification_label.Name = "notification_label";
             this.notification_label.Size = new System.Drawing.Size(158, 32);
             this.notification_label.TabIndex = 19;
             this.notification_label.Text = "Notification";
+            this.notification_label.Click += new System.EventHandler(this.notification_label_Click);
             // 
             // logout_label
             // 
             this.logout_label.AutoSize = true;
             this.logout_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logout_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_label.Location = new System.Drawing.Point(19, 478);
-            this.logout_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.logout_label.Location = new System.Drawing.Point(28, 735);
             this.logout_label.Name = "logout_label";
             this.logout_label.Size = new System.Drawing.Size(99, 32);
             this.logout_label.TabIndex = 11;
             this.logout_label.Text = "Logout";
+            this.logout_label.Click += new System.EventHandler(this.logout_label_Click);
             // 
             // grades_label
             // 
             this.grades_label.AutoSize = true;
             this.grades_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.grades_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades_label.Location = new System.Drawing.Point(19, 341);
-            this.grades_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.grades_label.Location = new System.Drawing.Point(28, 525);
             this.grades_label.Name = "grades_label";
             this.grades_label.Size = new System.Drawing.Size(99, 32);
             this.grades_label.TabIndex = 18;
             this.grades_label.Text = "Grades";
+            this.grades_label.Click += new System.EventHandler(this.grades_label_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 277);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
@@ -94,12 +95,12 @@
             this.courses_label.AutoSize = true;
             this.courses_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.courses_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courses_label.Location = new System.Drawing.Point(19, 278);
-            this.courses_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.courses_label.Location = new System.Drawing.Point(28, 428);
             this.courses_label.Name = "courses_label";
             this.courses_label.Size = new System.Drawing.Size(110, 32);
             this.courses_label.TabIndex = 15;
             this.courses_label.Text = "Courses";
+            this.courses_label.Click += new System.EventHandler(this.courses_label_Click);
             // 
             // dashboard_label
             // 
@@ -108,12 +109,12 @@
             this.dashboard_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboard_label.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dashboard_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_label.Location = new System.Drawing.Point(19, 214);
-            this.dashboard_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dashboard_label.Location = new System.Drawing.Point(28, 329);
             this.dashboard_label.Name = "dashboard_label";
             this.dashboard_label.Size = new System.Drawing.Size(148, 32);
             this.dashboard_label.TabIndex = 16;
             this.dashboard_label.Text = "Dashboard";
+            this.dashboard_label.Click += new System.EventHandler(this.dashboard_label_Click);
             // 
             // panel1
             // 
@@ -124,43 +125,48 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.courses_label);
             this.panel1.Controls.Add(this.dashboard_label);
-            this.panel1.Location = new System.Drawing.Point(21, 22);
+            this.panel1.Location = new System.Drawing.Point(32, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 538);
+            this.panel1.Size = new System.Drawing.Size(294, 828);
             this.panel1.TabIndex = 24;
             // 
-            // textBox1
+            // notification_textBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Ivory;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(243, 22);
-            this.textBox1.MaxLength = 327670000;
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(816, 451);
-            this.textBox1.TabIndex = 30;
+            this.notification_textBox.BackColor = System.Drawing.Color.Ivory;
+            this.notification_textBox.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notification_textBox.Location = new System.Drawing.Point(364, 34);
+            this.notification_textBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.notification_textBox.MaxLength = 327670000;
+            this.notification_textBox.Multiline = true;
+            this.notification_textBox.Name = "notification_textBox";
+            this.notification_textBox.Size = new System.Drawing.Size(1222, 692);
+            this.notification_textBox.TabIndex = 30;
             // 
-            // view_math101_grade_button
+            // send_notification_btn
             // 
-            this.view_math101_grade_button.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.view_math101_grade_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.view_math101_grade_button.Location = new System.Drawing.Point(579, 486);
-            this.view_math101_grade_button.Name = "view_math101_grade_button";
-            this.view_math101_grade_button.Size = new System.Drawing.Size(165, 68);
-            this.view_math101_grade_button.TabIndex = 31;
-            this.view_math101_grade_button.Text = "Post Notification";
-            this.view_math101_grade_button.UseVisualStyleBackColor = false;
+            this.send_notification_btn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.send_notification_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.send_notification_btn.Location = new System.Drawing.Point(868, 748);
+            this.send_notification_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.send_notification_btn.Name = "send_notification_btn";
+            this.send_notification_btn.Size = new System.Drawing.Size(248, 105);
+            this.send_notification_btn.TabIndex = 31;
+            this.send_notification_btn.Text = "Post Notification";
+            this.send_notification_btn.UseVisualStyleBackColor = false;
+            this.send_notification_btn.Click += new System.EventHandler(this.send_notification_btn_Click);
             // 
             // ProfessorNotification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1086, 582);
-            this.Controls.Add(this.view_math101_grade_button);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(1629, 895);
+            this.Controls.Add(this.send_notification_btn);
+            this.Controls.Add(this.notification_textBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ProfessorNotification";
             this.Text = "StudentNotification";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -180,7 +186,7 @@
         private System.Windows.Forms.Label courses_label;
         private System.Windows.Forms.Label dashboard_label;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button view_math101_grade_button;
+        private System.Windows.Forms.TextBox notification_textBox;
+        private System.Windows.Forms.Button send_notification_btn;
     }
 }

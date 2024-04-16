@@ -13,6 +13,7 @@ namespace Group3_Student_Management_Application
 {
     public partial class StudentCourses : Form
     {
+        private string firstName;
         public StudentCourses()
         {
             InitializeComponent();
@@ -29,7 +30,9 @@ namespace Group3_Student_Management_Application
 
         private void dashboard_label_Click(object sender, EventArgs e)
         {
-           
+            StudentDashboard dashboard = new StudentDashboard(firstName);
+            dashboard.Show();
+            this.Hide();
         }
 
         private void notification_label_Click(object sender, EventArgs e)

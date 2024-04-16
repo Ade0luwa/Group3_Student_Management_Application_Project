@@ -58,9 +58,10 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.courses_label);
             this.panel1.Controls.Add(this.dashboard_label);
-            this.panel1.Location = new System.Drawing.Point(21, 22);
+            this.panel1.Location = new System.Drawing.Point(32, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 538);
+            this.panel1.Size = new System.Drawing.Size(294, 828);
             this.panel1.TabIndex = 32;
             // 
             // notification_label
@@ -68,44 +69,45 @@
             this.notification_label.AutoSize = true;
             this.notification_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notification_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notification_label.Location = new System.Drawing.Point(19, 411);
-            this.notification_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.notification_label.Location = new System.Drawing.Point(28, 632);
             this.notification_label.Name = "notification_label";
             this.notification_label.Size = new System.Drawing.Size(158, 32);
             this.notification_label.TabIndex = 19;
             this.notification_label.Text = "Notification";
+            this.notification_label.Click += new System.EventHandler(this.notification_label_Click);
             // 
             // logout_label
             // 
             this.logout_label.AutoSize = true;
             this.logout_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logout_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_label.Location = new System.Drawing.Point(19, 478);
-            this.logout_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.logout_label.Location = new System.Drawing.Point(28, 735);
             this.logout_label.Name = "logout_label";
             this.logout_label.Size = new System.Drawing.Size(99, 32);
             this.logout_label.TabIndex = 11;
             this.logout_label.Text = "Logout";
+            this.logout_label.Click += new System.EventHandler(this.logout_label_Click);
             // 
             // grades_label
             // 
             this.grades_label.AutoSize = true;
             this.grades_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.grades_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades_label.Location = new System.Drawing.Point(19, 341);
-            this.grades_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.grades_label.Location = new System.Drawing.Point(28, 525);
             this.grades_label.Name = "grades_label";
             this.grades_label.Size = new System.Drawing.Size(99, 32);
             this.grades_label.TabIndex = 18;
             this.grades_label.Text = "Grades";
+            this.grades_label.Click += new System.EventHandler(this.grades_label_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 277);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
@@ -115,8 +117,7 @@
             this.courses_label.BackColor = System.Drawing.Color.Honeydew;
             this.courses_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.courses_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courses_label.Location = new System.Drawing.Point(19, 278);
-            this.courses_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.courses_label.Location = new System.Drawing.Point(28, 428);
             this.courses_label.Name = "courses_label";
             this.courses_label.Size = new System.Drawing.Size(110, 32);
             this.courses_label.TabIndex = 15;
@@ -129,19 +130,20 @@
             this.dashboard_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboard_label.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dashboard_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_label.Location = new System.Drawing.Point(19, 214);
-            this.dashboard_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dashboard_label.Location = new System.Drawing.Point(28, 329);
             this.dashboard_label.Name = "dashboard_label";
             this.dashboard_label.Size = new System.Drawing.Size(148, 32);
             this.dashboard_label.TabIndex = 16;
             this.dashboard_label.Text = "Dashboard";
+            this.dashboard_label.Click += new System.EventHandler(this.dashboard_label_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1031, 540);
+            this.button1.Location = new System.Drawing.Point(1546, 831);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 30);
+            this.button1.Size = new System.Drawing.Size(64, 46);
             this.button1.TabIndex = 39;
             this.button1.Text = ">>";
             this.button1.UseVisualStyleBackColor = true;
@@ -151,11 +153,12 @@
             this.textBox2.BackColor = System.Drawing.Color.Ivory;
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(665, 65);
+            this.textBox2.Location = new System.Drawing.Point(998, 100);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.MaxLength = 327670000;
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(383, 221);
+            this.textBox2.Size = new System.Drawing.Size(572, 338);
             this.textBox2.TabIndex = 38;
             this.textBox2.Text = resources.GetString("textBox2.Text");
             // 
@@ -164,11 +167,12 @@
             this.textBox1.BackColor = System.Drawing.Color.Ivory;
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(253, 293);
+            this.textBox1.Location = new System.Drawing.Point(380, 451);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.MaxLength = 327670000;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(383, 267);
+            this.textBox1.Size = new System.Drawing.Size(572, 409);
             this.textBox1.TabIndex = 37;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -176,18 +180,20 @@
             // 
             this.stat_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("stat_picture.BackgroundImage")));
             this.stat_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.stat_picture.Location = new System.Drawing.Point(661, 332);
+            this.stat_picture.Location = new System.Drawing.Point(992, 511);
+            this.stat_picture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.stat_picture.Name = "stat_picture";
-            this.stat_picture.Size = new System.Drawing.Size(387, 157);
+            this.stat_picture.Size = new System.Drawing.Size(580, 242);
             this.stat_picture.TabIndex = 36;
             this.stat_picture.TabStop = false;
             // 
             // math_picture
             // 
             this.math_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("math_picture.BackgroundImage")));
-            this.math_picture.Location = new System.Drawing.Point(253, 65);
+            this.math_picture.Location = new System.Drawing.Point(380, 100);
+            this.math_picture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.math_picture.Name = "math_picture";
-            this.math_picture.Size = new System.Drawing.Size(383, 160);
+            this.math_picture.Size = new System.Drawing.Size(574, 246);
             this.math_picture.TabIndex = 35;
             this.math_picture.TabStop = false;
             // 
@@ -196,8 +202,7 @@
             this.stat_label.AutoSize = true;
             this.stat_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stat_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stat_label.Location = new System.Drawing.Point(802, 492);
-            this.stat_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.stat_label.Location = new System.Drawing.Point(1203, 757);
             this.stat_label.Name = "stat_label";
             this.stat_label.Size = new System.Drawing.Size(123, 32);
             this.stat_label.TabIndex = 34;
@@ -208,8 +213,7 @@
             this.math_label.AutoSize = true;
             this.math_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.math_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.math_label.Location = new System.Drawing.Point(374, 228);
-            this.math_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.math_label.Location = new System.Drawing.Point(561, 351);
             this.math_label.Name = "math_label";
             this.math_label.Size = new System.Drawing.Size(137, 32);
             this.math_label.TabIndex = 33;
@@ -217,10 +221,10 @@
             // 
             // ProfessorCourses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1086, 582);
+            this.ClientSize = new System.Drawing.Size(1629, 895);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
@@ -230,6 +234,7 @@
             this.Controls.Add(this.stat_label);
             this.Controls.Add(this.math_label);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ProfessorCourses";
             this.Text = "ProfessorCourses";
             this.panel1.ResumeLayout(false);

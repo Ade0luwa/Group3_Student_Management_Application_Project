@@ -14,6 +14,7 @@ namespace Group3_Student_Management_Application
 {
     public partial class StudentGrades : Form
     {
+        private string firstName;
         public StudentGrades()
         {
             InitializeComponent();
@@ -130,5 +131,11 @@ namespace Group3_Student_Management_Application
             conn.Close();
         }
 
+        private void dashboard_label_Click(object sender, EventArgs e)
+        {
+            StudentDashboard dashboard = new StudentDashboard(firstName);
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

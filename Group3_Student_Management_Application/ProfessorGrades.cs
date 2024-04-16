@@ -12,9 +12,46 @@ namespace Group3_Student_Management_Application
 {
     public partial class ProfessorGrades : Form
     {
+        private string firstName;
         public ProfessorGrades()
         {
             InitializeComponent();
+        }
+
+        private void dashboard_label_Click(object sender, EventArgs e)
+        {
+            ProfessorDashboard dashboard = new ProfessorDashboard(firstName);
+            dashboard.Show();
+            this.Hide();
+        }
+
+        private void courses_label_Click(object sender, EventArgs e)
+        {
+            ProfessorCourses professorCourses = new ProfessorCourses();
+            professorCourses.Show();
+            this.Hide();
+        }
+
+        private void notification_label_Click(object sender, EventArgs e)
+        {
+            ProfessorNotification notification = new ProfessorNotification();
+            notification.Show();
+            this.Close();
+        }
+
+        private void logout_label_Click(object sender, EventArgs e)
+        {
+            grades_label.BackColor = Color.DarkSeaGreen;
+            logout_label.BackColor = Color.Honeydew;
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Check the user's response
+            if (result == DialogResult.Yes)
+            {
+                Login login = new Login();
+                login.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -72,7 +72,8 @@ namespace Group3_Student_Management_Application
                         }
                         else if (role == "Professor")
                         {
-                            ProfessorDashboard professorDashboard = new ProfessorDashboard();
+                            string firstName = dt.Rows[0]["FirstName"].ToString();
+                            ProfessorDashboard professorDashboard = new ProfessorDashboard(firstName);
                             professorDashboard.Show();
                             this.Hide();
                         }   

@@ -49,44 +49,45 @@
             this.notification_label.AutoSize = true;
             this.notification_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notification_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notification_label.Location = new System.Drawing.Point(19, 411);
-            this.notification_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.notification_label.Location = new System.Drawing.Point(28, 632);
             this.notification_label.Name = "notification_label";
             this.notification_label.Size = new System.Drawing.Size(158, 32);
             this.notification_label.TabIndex = 19;
             this.notification_label.Text = "Notification";
+            this.notification_label.Click += new System.EventHandler(this.notification_label_Click);
             // 
             // logout_label
             // 
             this.logout_label.AutoSize = true;
             this.logout_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logout_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_label.Location = new System.Drawing.Point(19, 478);
-            this.logout_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.logout_label.Location = new System.Drawing.Point(28, 735);
             this.logout_label.Name = "logout_label";
             this.logout_label.Size = new System.Drawing.Size(99, 32);
             this.logout_label.TabIndex = 11;
             this.logout_label.Text = "Logout";
+            this.logout_label.Click += new System.EventHandler(this.logout_label_Click);
             // 
             // grades_label
             // 
             this.grades_label.AutoSize = true;
             this.grades_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.grades_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grades_label.Location = new System.Drawing.Point(19, 341);
-            this.grades_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.grades_label.Location = new System.Drawing.Point(28, 525);
             this.grades_label.Name = "grades_label";
             this.grades_label.Size = new System.Drawing.Size(99, 32);
             this.grades_label.TabIndex = 18;
             this.grades_label.Text = "Grades";
+            this.grades_label.Click += new System.EventHandler(this.grades_label_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(294, 277);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
@@ -95,12 +96,12 @@
             this.courses_label.AutoSize = true;
             this.courses_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.courses_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.courses_label.Location = new System.Drawing.Point(19, 278);
-            this.courses_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.courses_label.Location = new System.Drawing.Point(28, 428);
             this.courses_label.Name = "courses_label";
             this.courses_label.Size = new System.Drawing.Size(110, 32);
             this.courses_label.TabIndex = 15;
             this.courses_label.Text = "Courses";
+            this.courses_label.Click += new System.EventHandler(this.courses_label_Click);
             // 
             // dashboard_label
             // 
@@ -109,12 +110,12 @@
             this.dashboard_label.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboard_label.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.dashboard_label.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_label.Location = new System.Drawing.Point(19, 214);
-            this.dashboard_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dashboard_label.Location = new System.Drawing.Point(28, 329);
             this.dashboard_label.Name = "dashboard_label";
             this.dashboard_label.Size = new System.Drawing.Size(148, 32);
             this.dashboard_label.TabIndex = 16;
             this.dashboard_label.Text = "Dashboard";
+            this.dashboard_label.Click += new System.EventHandler(this.dashboard_label_Click);
             // 
             // panel1
             // 
@@ -125,20 +126,23 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.courses_label);
             this.panel1.Controls.Add(this.dashboard_label);
-            this.panel1.Location = new System.Drawing.Point(21, 22);
+            this.panel1.Location = new System.Drawing.Point(32, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 538);
+            this.panel1.Size = new System.Drawing.Size(294, 828);
             this.panel1.TabIndex = 24;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.Ivory;
+            this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(236, 482);
+            this.textBox1.Location = new System.Drawing.Point(354, 742);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.MaxLength = 327670000;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(813, 78);
+            this.textBox1.Size = new System.Drawing.Size(1218, 118);
             this.textBox1.TabIndex = 33;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -146,9 +150,10 @@
             // 
             this.math_picture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("math_picture.BackgroundImage")));
             this.math_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.math_picture.Location = new System.Drawing.Point(236, 99);
+            this.math_picture.Location = new System.Drawing.Point(354, 152);
+            this.math_picture.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.math_picture.Name = "math_picture";
-            this.math_picture.Size = new System.Drawing.Size(813, 377);
+            this.math_picture.Size = new System.Drawing.Size(1220, 580);
             this.math_picture.TabIndex = 32;
             this.math_picture.TabStop = false;
             // 
@@ -156,25 +161,27 @@
             // 
             this.welcome_label.AutoSize = true;
             this.welcome_label.Font = new System.Drawing.Font("Papyrus", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcome_label.Location = new System.Drawing.Point(223, 22);
+            this.welcome_label.Location = new System.Drawing.Point(334, 34);
+            this.welcome_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcome_label.Name = "welcome_label";
-            this.welcome_label.Size = new System.Drawing.Size(449, 76);
+            this.welcome_label.Size = new System.Drawing.Size(0, 76);
             this.welcome_label.TabIndex = 31;
-            this.welcome_label.Text = "Welcome Professor";
             // 
             // ProfessorDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1086, 582);
+            this.ClientSize = new System.Drawing.Size(1629, 895);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.math_picture);
             this.Controls.Add(this.welcome_label);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ProfessorDashboard";
             this.Text = "ProfessorDashboard";
+            this.Load += new System.EventHandler(this.ProfessorDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
