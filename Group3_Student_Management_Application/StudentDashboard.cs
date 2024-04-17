@@ -14,10 +14,12 @@ namespace Group3_Student_Management_Application
     public partial class StudentDashboard : Form
     {
         private string firstName;
-        public StudentDashboard(string firstName)
+        private int userID;
+        public StudentDashboard(int userID, string firstName)
         {
             InitializeComponent();
             this.firstName = firstName;
+            this.userID = userID;
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=ADEOLUWATOMIWA\MSSQLSERVER01;Initial Catalog=Group3StudentManagement;Integrated Security=True;");
@@ -50,7 +52,7 @@ namespace Group3_Student_Management_Application
         private void grades_label_Click(object sender, EventArgs e)
         {
             //navigating to grades page
-            StudentGrades studentGrades = new StudentGrades();
+            StudentGrades studentGrades = new StudentGrades(userID);
             studentGrades.Show();
             this.Close();
         }

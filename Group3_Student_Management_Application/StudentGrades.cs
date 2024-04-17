@@ -15,9 +15,11 @@ namespace Group3_Student_Management_Application
     public partial class StudentGrades : Form
     {
         private string firstName;
-        public StudentGrades()
+        private int userID;
+        public StudentGrades(int userID)
         {
             InitializeComponent();
+            this.userID = userID;
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=ADEOLUWATOMIWA\MSSQLSERVER01;Initial Catalog=Group3StudentManagement;Integrated Security=True;");
@@ -93,47 +95,61 @@ namespace Group3_Student_Management_Application
         private void view_math101_grade_button_Click(object sender, EventArgs e)
         {
             // Call a method to fetch and display Math 101 grades
-            DisplayGrades("Math101");
+            ViewGradesForCourse("Math101");
         }
 
         private void view_stat101_grade_button_Click(object sender, EventArgs e)
         {
             // Call a method to fetch and display Stat 101 grades
-            DisplayGrades("Stat101");
+            ViewGradesForCourse("Stat101");
         }
 
-        private void DisplayGrades(string courseName)
+        private void ViewGradesForCourse(string courseName)
         {
-            // Initialize a string to hold the grades
-            string gradesMessage = "Grades for " + courseName + ":\n";
-
-
-            conn.Open();
-
-            // SQL query to retrieve grades for the specified course
-            string query = "SELECT Grades.UserID, Grades.Grade FROM Grades INNER JOIN Courses ON Grades.CourseID = Courses.CourseID WHERE Courses.CourseName = @CourseName";
-
-            using (SqlCommand command = new SqlCommand(query, conn))
+            try
             {
-                command.Parameters.AddWithValue("@CourseName", courseName);
+                conn.Open();
 
-                using (SqlDataReader reader = command.ExecuteReader())
+                // SQL query to retrieve the grade for the specified course and logged-in student
+                string query = "SELECT Grades.Grade FROM Grades " +
+                               "INNER JOIN Courses ON Grades.CourseID = Courses.CourseID " +
+                               "WHERE Grades.UserID = @UserID AND Courses.CourseName = @CourseName";
+
+                using (SqlCommand command = new SqlCommand(query, conn))
                 {
-                    while (reader.Read())
+                    command.Parameters.AddWithValue("@UserID", userID);
+                    command.Parameters.AddWithValue("@CourseName", courseName);
+
+                    // Execute the query and get the grade for the specified course
+                    object gradeObj = command.ExecuteScalar();
+
+                    if (gradeObj != null && gradeObj != DBNull.Value)
                     {
-                        gradesMessage += "Your current grade is: " + reader["Grade"] + "\n";
+                        // Convert the grade object to string
+                        string grade = gradeObj.ToString();
+
+                        // Display the grade in a message box
+                        MessageBox.Show($"Your grade for {courseName}: {grade}", "Grade Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"No grade found for {courseName}", "Grade Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
-
-            // Displays the gradesMessage in a message box
-            MessageBox.Show(gradesMessage, "Grades Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            conn.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void dashboard_label_Click(object sender, EventArgs e)
         {
-            StudentDashboard dashboard = new StudentDashboard(firstName);
+            StudentDashboard dashboard = new StudentDashboard(userID, firstName);
             dashboard.Show();
             this.Hide();
         }

@@ -14,23 +14,25 @@ namespace Group3_Student_Management_Application
     public partial class StudentCourses : Form
     {
         private string firstName;
+        private int userID;
         public StudentCourses()
         {
             InitializeComponent();
+            this.userID = 0;
         }
 
         SqlConnection conn = new SqlConnection(@"Data Source=ADEOLUWATOMIWA\MSSQLSERVER01;Initial Catalog=Group3StudentManagement;Integrated Security=True;");
 
         private void grades_label_Click(object sender, EventArgs e)
         {
-            StudentGrades studentGrades = new StudentGrades();
+            StudentGrades studentGrades = new StudentGrades(userID);
             studentGrades.Show();
             this.Close();
         }
 
         private void dashboard_label_Click(object sender, EventArgs e)
         {
-            StudentDashboard dashboard = new StudentDashboard(firstName);
+            StudentDashboard dashboard = new StudentDashboard(userID,firstName);
             dashboard.Show();
             this.Hide();
         }
