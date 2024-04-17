@@ -157,7 +157,7 @@ namespace Group3_Student_Management_Application
         private bool IsPositiveInteger(string text)
         {
             int value;
-            return int.TryParse(text, out value) && value > 0;
+            return int.TryParse(text, out value) && value >= 0;
         }
 
         private void submit_grade_button_Click(object sender, EventArgs e)
@@ -213,6 +213,8 @@ namespace Group3_Student_Management_Application
                 students_comboBox.Items.Clear();
                 courses_comboBox.Items.Clear();
                 grade_textBox.Clear();
+                populateCoursesComboBox();
+                populateStudentComboBox();
             }
             catch (Exception ex)
             {
