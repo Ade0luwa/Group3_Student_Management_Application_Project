@@ -196,7 +196,6 @@
             this.students_comboBox.Name = "students_comboBox";
             this.students_comboBox.Size = new System.Drawing.Size(472, 44);
             this.students_comboBox.TabIndex = 39;
-            this.students_comboBox.SelectedIndexChanged += new System.EventHandler(this.students_comboBox_SelectedIndexChanged);
             // 
             // grade_textBox
             // 

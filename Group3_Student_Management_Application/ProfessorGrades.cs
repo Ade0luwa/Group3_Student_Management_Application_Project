@@ -60,7 +60,7 @@ namespace Group3_Student_Management_Application
         private void courses_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Display the selected course name
-            MessageBox.Show($"Selected Course Name: {courses_comboBox.SelectedItem}");
+            //MessageBox.Show($"Selected Course Name: {courses_comboBox.SelectedItem}");
         }
 
         private void ProfessorGrades_Load(object sender, EventArgs e)
@@ -84,12 +84,6 @@ namespace Group3_Student_Management_Application
             }
         }
 
-
-        private void students_comboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Display the selected course name
-            MessageBox.Show($"Selected Student Name: {students_comboBox.SelectedItem}");
-        }
 
         private void populateStudentComboBox()
         {
@@ -216,6 +210,9 @@ namespace Group3_Student_Management_Application
                 }
 
                 MessageBox.Show("Grade submitted successfully.");
+                students_comboBox.Items.Clear();
+                courses_comboBox.Items.Clear();
+                grade_textBox.Clear();
             }
             catch (Exception ex)
             {
