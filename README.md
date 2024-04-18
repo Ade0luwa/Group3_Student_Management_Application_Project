@@ -7,11 +7,17 @@ A. Application Description Summary
 1. User SignUp - User could be Student or Professor
 2. User Login - User could be Student or Professor
 3. Student View having the following pages/abilities;
+   
     a. Dashboard: Student can view their dashboard with their name on it and a summary details of the application.
+   
     b. Courses: Student can view a summary of their courses.
+   
     c. Grades: Student can view the grades for their courses.
+   
     d. Notification: Student can view latest notification sent by Professor.
+   
     e. Logout: Student can Logout of the application.
+   
 4. Professor View having the following pages/abilities;
     a. Dashboard: Professor can view their dashboard with their name on it and a summary details of the application.
     b. Courses: Professor can view a summary of the courses.
@@ -20,6 +26,7 @@ A. Application Description Summary
     e. Logout: Professor can Logout of the application.
 
 B. Group Members and Contributions
+
     1. Adeoluwatomiwa Adegbesan- 8965771: Implementation
     2. Ogechi Angela Ikediashi- 8913831: Implementation
     3. Prasanna chinnu- 8869349: Designing and Compilation
@@ -28,6 +35,7 @@ B. Group Members and Contributions
     6. Pooja Talaniya -8904569: Testing
 
 C. Database Setup
+
     1. Database Creation: The application needs a Database to run and it it contain four (4) tables and Data seeded into one (1) of the tables.
         The tables are:
             UserCredentials
@@ -38,14 +46,17 @@ C. Database Setup
 
         a. Create a Database called "Group3StudentManagement" manually in your local Microsoft SQL Database.
         b. Run the following scripts after one another to create the different tables and insert the necessary records.
+        
 --------UserCredentials:
-USE [Group3StudentManagement]
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[UserCredentials](
+
+    USE [Group3StudentManagement]
+    GO
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+    
+    CREATE TABLE [dbo].[UserCredentials](
     [UserID] [int] IDENTITY(1,1) NOT NULL,
     [FirstName] [varchar](100) NOT NULL,
     [LastName] [varchar](100) NOT NULL,
@@ -54,84 +65,93 @@ CREATE TABLE [dbo].[UserCredentials](
     [Password] [varchar](50) NOT NULL,
     [Phone] [varchar](10) NOT NULL,
     [DateCreated] [datetime] NOT NULL,
-PRIMARY KEY CLUSTERED 
-(
+    
+    PRIMARY KEY CLUSTERED 
+    (
     [UserID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
---------Notification:
-USE [Group3StudentManagement]
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Notification](
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+    ) ON [PRIMARY]
+    GO
+
+--------Notification:.
+
+    USE [Group3StudentManagement]
+    GO
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+    CREATE TABLE [dbo].[Notification](
     [NotificationMessage] [nvarchar](max) NOT NULL,
     [Date] [datetime] NOT NULL
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
+    ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+    GO
+
 --------Courses:
-USE [Group3StudentManagement]
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Courses](
+
+    USE [Group3StudentManagement]
+    GO
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+    CREATE TABLE [dbo].[Courses](
     [CourseID] [int] NOT NULL,
     [CourseName] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_Courses] PRIMARY KEY CLUSTERED 
-(
+    CONSTRAINT [PK_Courses] PRIMARY KEY CLUSTERED 
+    (
     [CourseID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-ALTER TABLE [dbo].[Courses]  WITH CHECK ADD  CONSTRAINT [FK_Courses_Courses] FOREIGN KEY([CourseID])
-REFERENCES [dbo].[Courses] ([CourseID])
-GO
-ALTER TABLE [dbo].[Courses] CHECK CONSTRAINT [FK_Courses_Courses]
-GO
-
-USE [Group3StudentManagement]
-GO
-INSERT INTO [dbo].[Courses]
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+    ) ON [PRIMARY]
+    GO
+    ALTER TABLE [dbo].[Courses]  WITH CHECK ADD  CONSTRAINT [FK_Courses_Courses] FOREIGN KEY([CourseID])
+    REFERENCES [dbo].[Courses] ([CourseID])
+    GO
+    ALTER TABLE [dbo].[Courses] CHECK CONSTRAINT [FK_Courses_Courses]
+    GO
+    USE [Group3StudentManagement]
+    GO
+    INSERT INTO [dbo].[Courses]
            ([CourseID]
            ,[CourseName])
      VALUES
            ('1', 'MATH101'),
            ('2', 'STAT101')
-GO
+           GO
+           
 --------Grades:
-USE [Group3StudentManagement]
-GO
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Grades](
+    
+    USE [Group3StudentManagement]
+    GO
+    SET ANSI_NULLS ON
+    GO
+    SET QUOTED_IDENTIFIER ON
+    GO
+    CREATE TABLE [dbo].[Grades](
     [UserID] [int] NOT NULL,
     [CourseID] [int] NOT NULL,
     [Grade] [int] NOT NULL
-) ON [PRIMARY]
-GO
-ALTER TABLE [dbo].[Grades]  WITH CHECK ADD  CONSTRAINT [FK_Grades_Courses] FOREIGN KEY([CourseID])
-REFERENCES [dbo].[Courses] ([CourseID])
-GO
-ALTER TABLE [dbo].[Grades] CHECK CONSTRAINT [FK_Grades_Courses]
-GO
-ALTER TABLE [dbo].[Grades]  WITH CHECK ADD  CONSTRAINT [FK_Grades_UserCredentials] FOREIGN KEY([UserID])
-REFERENCES [dbo].[UserCredentials] ([UserID])
-GO
-ALTER TABLE [dbo].[Grades] CHECK CONSTRAINT [FK_Grades_UserCredentials]
-GO
+    ) ON [PRIMARY]
+    GO
+    ALTER TABLE [dbo].[Grades]  WITH CHECK ADD  CONSTRAINT [FK_Grades_Courses] FOREIGN KEY([CourseID])
+    REFERENCES [dbo].[Courses] ([CourseID])
+    GO
+    ALTER TABLE [dbo].[Grades] CHECK CONSTRAINT [FK_Grades_Courses]
+    GO
+    ALTER TABLE [dbo].[Grades]  WITH CHECK ADD  CONSTRAINT [FK_Grades_UserCredentials] FOREIGN KEY([UserID])
+    REFERENCES [dbo].[UserCredentials] ([UserID])
+    GO
+    ALTER TABLE [dbo].[Grades] CHECK CONSTRAINT [FK_Grades_UserCredentials]
+    GO
 
 D. Application Setup
-    1. Clone the Application Repository from your Visual Studio "https://github.com/Ade0luwa/Group3_Student_Management_Application_Project"
+
+1. Clone the Application Repository from your Visual Studio "https://github.com/Ade0luwa/Group3_Student_Management_Application_Project"
 
 E. Application and Database Connection Setup
-    In your Visual Studio, when the cloned application is open, the the following;
+
+In your Visual Studio, when the cloned application is open, the the following;
+
         1. Goto View
         2. Select Server Explorer
         3. Click on Connect to Database
